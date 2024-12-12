@@ -52,6 +52,7 @@ pom.xml에 아래의 내용을 추가해주세요.
 - POST /subscribe/payments/again
 - POST /subscribe/payments/schedule
 - POST /subscribe/payments/unschedule
+- GET /subscribe/payments/schedule/customers/{customer_uid}
 
 ### 결제 사전검증 API
 
