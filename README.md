@@ -28,9 +28,9 @@ pom.xml에 아래의 내용을 추가해주세요.
 ```xml
 <dependencies>
 	<dependency>
-	    <groupId>com.github.iamport</groupId>
-	    <artifactId>iamport-rest-client-java</artifactId>
-	    <version>0.2.23</version>
+	    <groupId>com.github.seoulpi</groupId>
+	    <artifactId>iamport-rest-client</artifactId>
+	    <version>0.2.24</version>
 	</dependency>
 </dependencies>
 ```
