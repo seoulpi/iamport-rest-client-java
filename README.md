@@ -9,6 +9,12 @@ JAVA 사용자를 위한 아임포트 REST API 연동 모듈입니다.
 JAVA 1.7이상의 버전을 요구합니다.  
 (dependency관계에 있는 [com.squareup.retrofit2](https://github.com/square/retrofit) 이 JAVA 1.7이상의 버전을 요구합니다)
 
+## 배포
+GCP와 Github에 각각 배포하기 위해 Profile을 구분
+```shell
+mvn clean deploy -P [PROFILE_NAME]
+```
+
 
 ## 설치
     
