@@ -17,7 +17,7 @@ mvn clean deploy -P [PROFILE_NAME]
 
 
 ## 설치
-    
+
 [JitPack](https://jitpack.io/#iamport/iamport-rest-client-java) 을 통해 maven설정을 하실 수 있습니다.  
 
 pom.xml에 아래의 내용을 추가해주세요. 
@@ -36,11 +36,11 @@ pom.xml에 아래의 내용을 추가해주세요.
 	<dependency>
 	    <groupId>com.github.seoulpi</groupId>
 	    <artifactId>iamport-rest-client</artifactId>
-	    <version>0.2.24</version>
+	    <version>0.2.25</version>
 	</dependency>
 </dependencies>
 ```
- 
+
 
 
 ## 구현된 API
@@ -138,11 +138,11 @@ API 응답 오류 상황에 대해 명시적으로 Exception 을 발생시킴으
 ```java
 try {
 	IamportResponse<Payment> paymentResponse = client.paymentByImpUid("imp_123412341234");
-	
+
 	//TODO : 처리 로직
 } catch (IamportResponseException e) {
 	System.out.println(e.getMessage());
-	
+
 	switch(e.getHttpStatusCode()) {
 	case 401 :
 		//TODO : 401 Unauthorized 

@@ -90,8 +90,14 @@ public class IamportClient {
 	}
 
 	public IamportResponse<Payment> paymentByImpUid(String impUid) throws IamportResponseException, IOException {
+		return paymentByImpUid(impUid, null);
+	}
+
+	public IamportResponse<Payment> paymentByImpUid(String impUid, Boolean includeSandbox) throws IamportResponseException, IOException {
 		AccessToken auth = getAuth().getResponse();
-		Call<IamportResponse<Payment>> call = this.iamport.payment_by_imp_uid(auth.getToken(), impUid);
+		// Set default value to false when includeSandbox is null
+		Boolean finalIncludeSandbox = (includeSandbox != null) ? includeSandbox : false;
+		Call<IamportResponse<Payment>> call = this.iamport.payment_by_imp_uid(auth.getToken(), impUid, finalIncludeSandbox);
 
 		Response<IamportResponse<Payment>> response = call.execute();
 		if ( !response.isSuccessful() )	throw new IamportResponseException( getExceptionMessage(response), new HttpException(response) );
